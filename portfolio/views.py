@@ -28,7 +28,6 @@ from .models import (
 	Education,
 	Experience,
 	Portfolio,
-	PortfolioDetail,
 	Image,
 )
 

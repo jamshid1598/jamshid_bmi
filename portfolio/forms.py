@@ -8,7 +8,6 @@ from .models import (
     Education,
     Experience,
     Portfolio,
-    PortfolioDetail,
     Image,
 )
 
@@ -70,19 +69,13 @@ class PortfolioForm(forms.ModelForm):
     image      = forms.ImageField(widget=forms.FileInput(attrs={}))
     link       = forms.URLField(widget=forms.URLInput(attrs={}))
     short_desc = forms.CharField(widget=TinyMCE(attrs={}))
+    description = forms.CharField(widget=TinyMCE(attrs={}))
 
     class Meta:
         model = Portfolio
         fields='__all__'
 
 
-class PortfolioDetailForm(forms.ModelForm):
-    portfolio   = forms.CharField(widget=forms.TextInput(attrs={}))
-    description = forms.CharField(widget=TinyMCE(attrs={}))
-
-    class Meta:
-        model = PortfolioDetail
-        fields='__all__'
 
 """
 

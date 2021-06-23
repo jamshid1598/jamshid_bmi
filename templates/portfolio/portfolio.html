@@ -48,11 +48,10 @@
 
         {% include 'portfolio/includes/message.html' %}
                 
-            
             <section class="container" style="min-height: 500px;">
-
-                <h4 class="text-center " style="margin-top: 30px; margin-bottom: 30px; color: grey;">Freelance Web Designer & Developer based in Galway, Ireland.
-                    Highly experienced in designing & developing custom Wordpress websites.</h4>
+                <h4 class="text-center " style="margin-top: 30px; margin-bottom: 30px; color: grey;">
+                    Portfoliolar To'plami
+                </h4>
                     <hr class="" style="box-shadow: 0 0 10px 1px rgba(0,0,0,1) ;">
                 <div class="row d-flex justify-content-around">
                     <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-3">
@@ -60,34 +59,31 @@
                             <img src="{% static 'image/1.jpg' %}" alt="">
                             <div class="card_img_title d-flex justify-content-center text-center">
                                 <div class="card_img_title_1 p-3" style="">
-                                    <h6 class="" style="color: aqua;">Tride</h6>
-                                    <p class="" style="color:white;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis quo, eaque ad a natus.</p>
+                                    <h6 class="" style="color: aqua;">Shumoff.uz</h6>
+                                    <p class="" style="color:white;">Shumaizolatsoya maxsulotlarini sotadigan magazinlar.</p>
                                 </div>
                                 <div class="card_img_title_2">
-                                    <a class="btn" href="#" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);" >view site</a>
-                                    <a class="btn" href="{% url 'portfolio_2:portfolio-detail' %}" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);">view project</a>
+                                    <a class="btn" href="#" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);" >saytga o'tish</a>
+                                    <a class="btn" href="{% url 'portfolio_2:portfolio-detail' %}" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);">ko'proq malumot</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-3">
                         <div class="card card_button">
-                            <img src="{% static 'image/white.jpg' %}" alt="">
+                            <img src="{% static 'image/white_bg.jpg' %}" alt="" style="width: 328px; height: 205px">
                             <div class="card_button_img">
-                                <button class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal">Add protfolio</button>
+                                <button class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal">protfolio qo'shish</button>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
-
-
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                      <h5 class="modal-title" id="exampleModalLabel">Portfolio form</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -98,55 +94,46 @@
                             {% csrf_token %}
                            
                             <div class="form-group my-1">
-                                <label for="project_name">Project name</label>
+                                <label for="project_name">Nomi</label>
                                 <input type="text" class="form-control" id='project_name' name="project_name">
                             </div> 
 
                             <div class="form-group my-1">
-                                <label for="short_descriptions">short descriptions</label>
+                                <label for="short_descriptions">Qisqacha Malumot</label>
                                 <textarea id='short_descriptions' class="form-control" ></textarea>
                                 
                             </div>
                            
                             <div class="form-group my-1">
-                                <label for="descriptions" >descriptions</label>
+                                <label for="descriptions" >To'liq Malumot</label>
                                 <textarea id='descriptions'  class="form-control"></textarea>
                             </div>
                             <div class="form-group my-1">
-                                <label for="project_link">Project link</label>
+                                <label for="project_link">Proyekt Linki</label>
                                 <input type="text" class="form-control" id='project_link' name="project_link">
                             </div>
-
                             <div class="custom-file mb-5">
-                                <label for="cover_image" class="m-0">Cover image</label>
+                                <label for="cover_image" class="m-0">Asosiy Rasm</label>
                                 <div class="btn m-0" style="width: 100%; background-color:gray;color:white;">  
                                     <input type="file" id="cover_image" style="width: 100%;", name='cover_image'>
                                 </div>
                             </div>
-
                             <div class="custom-file mb-5">
-                            
-                                <label for="upload_imgs" class="">images</label>
+                                <label for="upload_imgs" class="">Rasmlar</label>
                                 <div class="btn m-0" style="width: 100%; background-color:gray;color:white;">
                                     <input type="file" id="upload_imgs" style="width: 100%;" name="upload_imgs[]" multiple />
                                 </div>
                                 <div class="quote-imgs-thumbs quote-imgs-thumbs--hidden" id="img_preview" aria-live="polite"></div>
-                            
-                            
                             </div>
-                            
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Save changes</button>
-                              </div>
-                              
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Yopish</button>
+                                <button type="submit" class="btn btn-primary">Saqlash</button>
+                            </div>
                         </form>
-            
                     </div>
-                    
-                  </div>
                 </div>
             </div>
+        </div>
 
         {% include 'includes/pagination.html' %}
             
@@ -156,55 +143,50 @@
 
 
     {% block js %}
-    <script src="{% static 'bootstrap-4.5.3-dist/jquery-3.6.0.min.js' %}"></script>
-    <script src="{% static 'bootstrap-4.5.3-dist/popper.js' %}"></script>
-    <script src="{% static 'bootstrap-4.5.3-dist/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/index.js' %}" async defer></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/17.0.0/classic/ckeditor.js"></script>
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <script src="{% static 'bootstrap-4.5.3-dist/jquery-3.6.0.min.js' %}"></script>
+        <script src="{% static 'bootstrap-4.5.3-dist/popper.js' %}"></script>
+        <script src="{% static 'bootstrap-4.5.3-dist/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/index.js' %}" async defer></script>
+        <script src="https://cdn.ckeditor.com/ckeditor5/17.0.0/classic/ckeditor.js"></script>
+        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
-    <script>
-    
+        <script>
+            $('#myModal').on('shown.bs.modal', function () {
+                $('#myInput').trigger('focus')
+            })
+        
+            var imgUpload = document.getElementById('upload_imgs')
+            , imgPreview = document.getElementById('img_preview')
+            , imgUploadForm = document.getElementById('img-upload-form')
+            , totalFiles
+            , previewTitle
+            , previewTitleText
+            , img;
 
-         $('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
-        })
-       
-var imgUpload = document.getElementById('upload_imgs')
-  , imgPreview = document.getElementById('img_preview')
-  , imgUploadForm = document.getElementById('img-upload-form')
-  , totalFiles
-  , previewTitle
-  , previewTitleText
-  , img;
+            imgUpload.addEventListener('change', previewImgs, false);
+            imgUploadForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Images Uploaded! (not really, but it would if this was on your website)');
+            }, false);
 
-imgUpload.addEventListener('change', previewImgs, false);
-imgUploadForm.addEventListener('submit', function (e) {
-  e.preventDefault();
-  alert('Images Uploaded! (not really, but it would if this was on your website)');
-}, false);
-
-function previewImgs(event) {
-  totalFiles = imgUpload.files.length;
-  
-  if(!!totalFiles) {
-    imgPreview.classList.remove('quote-imgs-thumbs--hidden');
-    previewTitle = document.createElement('p');
-    previewTitle.style.fontWeight = 'bold';
-    previewTitleText = document.createTextNode(totalFiles + ' Total Images Selected');
-    previewTitle.appendChild(previewTitleText);
-    imgPreview.appendChild(previewTitle);
-  }
-  
-  for(var i = 0; i < totalFiles; i++) {
-    img = document.createElement('img');
-    img.src = URL.createObjectURL(event.target.files[i]);
-    img.classList.add('img-preview-thumb');
-    imgPreview.appendChild(img);
-  }
-}
-
-
-
-    </script>
+            function previewImgs(event) {
+            totalFiles = imgUpload.files.length;
+            
+            if(!!totalFiles) {
+                imgPreview.classList.remove('quote-imgs-thumbs--hidden');
+                previewTitle = document.createElement('p');
+                previewTitle.style.fontWeight = 'bold';
+                previewTitleText = document.createTextNode(totalFiles + ' Total Images Selected');
+                previewTitle.appendChild(previewTitleText);
+                imgPreview.appendChild(previewTitle);
+            }
+            
+            for(var i = 0; i < totalFiles; i++) {
+                img = document.createElement('img');
+                img.src = URL.createObjectURL(event.target.files[i]);
+                img.classList.add('img-preview-thumb');
+                imgPreview.appendChild(img);
+            }
+            }
+        </script>
     {% endblock js %}

@@ -25,20 +25,20 @@ class HomeView(View):
 		context={}
 		return render(request, self.template_name, context)
 
+# class PortfolioView(View):
+# 	template_name='create-portfolio-1.html'
+# 	def get(self, request, *args, **kwargs):
+# 		context={}
+# 		return render(request, self.template_name, context)
+
+
 class PortfolioView(View):
-	template_name='create-portfolio-1.html'
+	template_name='portfolio.html'
 	def get(self, request, *args, **kwargs):
 		context={}
 		return render(request, self.template_name, context)
 
-
-class ExampleView(View):
-	template_name='example.html'
-	def get(self, request, *args, **kwargs):
-		context={}
-		return render(request, self.template_name, context)
-
-class ExampleDetailView(View):
+class PortfolioDetailView(View):
 	template_name='portfolio-detail.html'
 	def get(self, request, *args, **kwargs):
 		context={}

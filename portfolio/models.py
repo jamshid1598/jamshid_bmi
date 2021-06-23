@@ -64,6 +64,7 @@ class Portfolio(models.Model):
     image = models.ImageField(_("Cover Image"), upload_to='portfolio-cover-image/', blank=True, null=True)
     name = models.CharField(_("Name"), max_length=300, blank=True, null=True)
     short_desc = models.TextField(_('Short Description'), blank=True, null=True)
+    description = models.TextField(_('Description'), blank=True, null=True)
     link = models.URLField(_("Project Link"), blank=True, null=True)
 
     class Meta:
@@ -82,20 +83,19 @@ class Portfolio(models.Model):
         return url
 
 
-class PortfolioDetail(models.Model):
-    portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE, related_name='portfolio_detail')
-    description = models.TextField(_('Description'), blank=True, null=True)
+# class PortfolioDetail(models.Model):
+#     portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE, related_name='portfolio_detail')
 
-    class Meta:
-        verbose_name = _("Portfolio Detail")
-        verbose_name_plural = _("Portfolio Details")
+#     class Meta:
+#         verbose_name = _("Portfolio Detail")
+#         verbose_name_plural = _("Portfolio Details")
 
-    def __str__(self):
-        return self.portfolio.name
+#     def __str__(self):
+#         return self.portfolio.name
 
 
 class Image(models.Model):
-    portfolio = models.ForeignKey(PortfolioDetail, on_delete=models.CASCADE, related_name='portfolio_image')
+    portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE, related_name='portfolio_image')
     image     = models.ImageField(_("Image"), upload_to="portfolio-image/", blank=True, null=True)
     caption   = models.CharField(_('Caption'), max_length=300, blank=True, null=True)
 

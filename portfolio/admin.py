@@ -8,7 +8,6 @@ from .models import (
     Education,
     Experience,
     Portfolio,
-    PortfolioDetail,
     Image,
 )
 
@@ -80,7 +79,13 @@ class ExperienceAdmin(admin.ModelAdmin):
 admin.site.register(Experience, ExperienceAdmin)
 
 
+class ImageTabularInline(admin.TabularInline):
+    model   = Image
+    max_num = 10
+
 class PortfolioAdmin(admin.ModelAdmin):
+    inlines = [ImageTabularInline, ]
+
     list_display       = ('student', 'name',)
     list_display_links = ('student', 'name',)
     search_fields      = ('student', 'name',)
@@ -89,7 +94,7 @@ class PortfolioAdmin(admin.ModelAdmin):
     fieldsets = (
         ('Portfolio', {
             "fields": (
-                'student', 'name', 'image', 'link', 'short_desc',
+                'student', 'name', 'image', 'link', 'short_desc', 'description',
             ),
         }),
     )
@@ -101,28 +106,26 @@ class PortfolioAdmin(admin.ModelAdmin):
 admin.site.register(Portfolio, PortfolioAdmin)
 
 
-class ImageTabularInline(admin.TabularInline):
-    model   = Image
-    max_num = 10
 
-class PortfolioDetailAdmin(admin.ModelAdmin):
-    inlines = [ImageTabularInline, ]
 
-    list_display       = ('portfolio', )
-    list_display_links = ('portfolio', )
-    search_fields      = ('portfolio', )
-    ordering           = ('portfolio', )
+# class PortfolioDetailAdmin(admin.ModelAdmin):
 
-    fieldsets = (
-        ('Portfolio Detail', {
-            "fields": (
-                'portfolio', 'description',                
-            ),
-        }),
-    )
+
+#     list_display       = ('portfolio', )
+#     list_display_links = ('portfolio', )
+#     search_fields      = ('portfolio', )
+#     ordering           = ('portfolio', )
+
+#     fieldsets = (
+#         ('Portfolio Detail', {
+#             "fields": (
+#                 'portfolio', 'description',                
+#             ),
+#         }),
+#     )
     
-    formfield_overrides = {
-        models.TextField : {'widget': TinyMCE}
-    }
+#     formfield_overrides = {
+#         models.TextField : {'widget': TinyMCE}
+#     }
 
-admin.site.register(PortfolioDetail, PortfolioDetailAdmin)
+# admin.site.register(PortfolioDetail, PortfolioDetailAdmin)

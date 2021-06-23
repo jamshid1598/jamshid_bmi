@@ -12,7 +12,7 @@
         
     {% endblock css %}
 
-    {% block title %} <title> Home </title> {% endblock title %}
+    {% block title %} <title> Asosiy Sahifa </title> {% endblock title %}
 
 
     {% block body %}
@@ -25,29 +25,29 @@
     
                 <div class="left-item">
     
-                    <h5>BUILD YOUR OWN </h5>
-                    <h3> ONLINE PORTFOLIO WEBSITE </h3>
-                    <p>FOR CREATIVES</p>
+                    <h5>O'ZINGIZNING SHAXSIY </h5>
+                    <h3> ONLINE PORTFOLIOINGIZNI YARATING</h3>
+                    <p>IJODKORLIK UCHUN</p>
     
                     <div>
                         {% if request.user.is_authenticated %}
                             {% if request.user.student.student_portfolio.all %}
                                 <a href="{% url 'portfolio_2:home' %}" class="btn btn-outline-primary px-5 my-3">
-                                    View Portfolio
+                                    Portfolioga O'tish
                                 </a>
                             {% else %}
                                 <a href="{% url 'portfolio_2:portfolio' %}" class="btn btn-outline-primary px-5 my-3">
-                                    Create Portfolio
+                                    Portfolio Qo'sish
                                 </a>
                             {% endif %}
                         {% else %}
                             <a href="{% url 'login' %}" class="btn btn-outline-primary px-5 my-3">
-                                Start Account
+                                Accont Yaratish
                             </a>
                         {% endif %}
                     </div>
     
-                    <small> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, adipisci. </small>
+                    <!-- <small> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, adipisci. </small> -->
 
                 </div>
                 <div class="right-item " >
@@ -64,9 +64,9 @@
                 <div class="bg-box">
                     <div class="container py-5">
                         <div class="my-5">
-                            <h3 class="text-white text-center">AN ONLINE PORTFOLIO</h3>
-                            <p class="text-white text-center">MADE FOR CREATIVES</p>
-                            <p class="text-white text-center"><small> WITH ALL THE TOOLS A PROFESSIONAL NEEDS</small></small>
+                            <h3 class="text-white text-center">ONLINE PORTFOLIO</h3>
+                            <p class="text-white text-center">IJODIYLAR UCHUN TAYYORLANGAN</p>
+                            <p class="text-white text-center"><small> kreativ ijodkorlar uchun professional ehtiyojlar uchun yaratilgan</small></small>
                         </div>
                         <div class="row">
                             <div class="col-sm-6 col-md-3 col-lg-2">
@@ -138,24 +138,28 @@
                             <div class="right-item">
                                 <h3 class="font-weight-bold text-center mb-3">
 
-                                    How to make online portfolio
+                                    Onlayn portfelni qanday qilish kerak
                                 </h3>
                                 <p class="text-center"> 
-                                    if you are a photographer, web developer, android/ios developer, 
-                                    ux/ui designer, model or creative, putting your work online is 
-                                    the best way to reach a longer audience. And you can do it in 
-                                    4 easy step. 
+                                    agar siz fotosuratchi bo'lsangiz, veb-dasturchi, android/ios ishlab chiqaruvchisi,
+                                    ux/ui dizayner, model yoki ijodiy, ishingizni Internetga joylashtirish
+                                    uzoqroq auditoriyani jalb qilishning eng yaxshi usuli. Va siz buni qila olasiz
+                                    4 ta oson qadam.
                                 </p>
 
                                 <ol class="m-3">
-                                    <li class="mb-3 text-muted font-weight-bold">Sign up or log in with email address.</li>
-                                    <li class="mb-3 text-muted font-weight-bold">Tell us a little about your work. Answer a few question and our portfolio maker creates the the web site for you.</li>
-                                    <li class="mb-3 text-muted font-weight-bold">Add your image, and some general information.</li>
-                                    <li class="mb-3 text-muted font-weight-bold">Provide your contact info for people who wants to get in touch with you.</li>
+                                    <li class="mb-3 text-muted font-weight-bold">Ro'yhatdan o'ting</li>
+                                    <li class="mb-3 text-muted font-weight-bold">
+                                        Bizga o'zingizning ishingiz haqida qisqacha gapirib bering. 
+                                        Bir nechta savolga javob bering va bizning portfel ishlab 
+                                        chiqaruvchimiz siz uchun veb-saytni yaratadi.
+                                    </li>
+                                    <li class="mb-3 text-muted font-weight-bold">Rasmingizni va ba'zi umumiy ma'lumotlarni qo'shing.</li>
+                                    <li class="mb-3 text-muted font-weight-bold">Siz bilan bog'lanishni istagan odamlar uchun aloqa ma'lumotlarini bering.</li>
                                 </ol>
 
                                 <div class="d-flex justify-content-center w-100">
-                                    <a href="{% url 'portfolio_2:portfolio' %}" class="btn btn-primary"> Start now </a>
+                                    <a href="{% url 'portfolio_2:portfolio' %}" class="btn btn-primary"> Hozir Boshlash </a>
                                 </div>
                             </div>
                         </div>
@@ -165,7 +169,7 @@
 
             <div class="faq-section  bg-light mt-5 py-5">
                 <div class="container">
-                    <h2 class="text-center font-weight-bold text-uppercase mb-5"> online portfolio faq </h2>
+                    <h2 class="text-center font-weight-bold text-uppercase mb-5">onlayn portfel bo'yicha savollar</h2>
 
                     <div class="acc-box mb-3">
                         <div class="acc-top border-bottom p-3 d-flex justify-content-between mb-3 border-dark">
@@ -204,26 +208,26 @@
                         </div>
                     </div>
 
-                    <h2 class="text-center font-weight-bold text-uppercase mt-5 mb-3"> show of your hard work </h2>
-                    <p class="text-center text-muted"> A portfolio create for every profession </p>
+                    <h2 class="text-center font-weight-bold text-uppercase mt-5 mb-3"> mehnatsevarligingiz namoyish eting. </h2>
+                    <p class="text-center text-muted"> Har bir kasb uchun portfolio yarating mumkin </p>
 
                     <div class="row my-5">
                         <div class="col-sm-12 col-md-4">
                             <div class="d-flex justify-content-center flex-column">
                                 <h4 class="font-weight-bold text-center">Freelancer</h4>
                                 <p class="text-center">
-                                    every freelancer needs a website to attract new customers, 
-                                    find work and show off your skills. Build your own 
-                                    portfolio with no coding required.
+                                    har bir freelancer yangi mijozlarni jalb qilish, ish topish va mahoratingizni 
+                                    namoyish qilish uchun veb-saytga muhtoj. Kodlash talab qilinmasdan 
+                                    o'zingizning portfelingizni yarating.
                                 </p>
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.student.student_portfolio.all %}
-                                        <a href="{% url 'portfolio_2:portfolio' %}" class="text-center w-100"> start portfolio </a>
+                                        <a href="{% url 'portfolio_2:portfolio' %}" class="text-center w-100"> portfolio qo'shing </a>
                                     {% else %}
-                                        <a href="{% url 'portfolio_2:portfolio' %}" class="text-center w-100"> start portfolio </a>
+                                        <a href="{% url 'portfolio_2:portfolio' %}" class="text-center w-100"> portfolio qo'shing </a>
                                     {% endif %}
                                 {% else %}
-                                    <a href="{% url 'login' %}" class="text-center w-100"> start portfolio </a>
+                                    <a href="{% url 'login' %}" class="text-center w-100"> portfolio qo'shing </a>
                                 {% endif %}
                             </div>
                         </div>
@@ -231,18 +235,18 @@
                             <div class="d-flex justify-content-center flex-column">
                                 <h4 class="font-weight-bold text-center">Web Developer</h4>
                                 <p class="text-center">
-                                    every freelancer needs a website to attract new customers, 
-                                    find work and show off your skills. Build your own 
-                                    portfolio with no coding required.
+                                    har bir freelancer yangi mijozlarni jalb qilish, ish topish va mahoratingizni 
+                                    namoyish qilish uchun veb-saytga muhtoj. Kodlash talab qilinmasdan 
+                                    o'zingizning portfelingizni yarating.
                                 </p>
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.student.student_portfolio.all %}
-                                        <a href="{% url 'portfolio_2:portfolio' %}" class="text-center w-100"> start portfolio </a>
+                                        <a href="{% url 'portfolio_2:portfolio' %}" class="text-center w-100"> portfolio qo'shing </a>
                                     {% else %}
-                                        <a href="{% url 'portfolio_2:portfolio' %}" class="text-center w-100"> start portfolio </a>
+                                        <a href="{% url 'portfolio_2:portfolio' %}" class="text-center w-100"> portfolio qo'shing </a>
                                     {% endif %}
                                 {% else %}
-                                    <a href="{% url 'login' %}" class="text-center w-100"> start portfolio </a>
+                                    <a href="{% url 'login' %}" class="text-center w-100"> portfolio qo'shing </a>
                                 {% endif %}
                             </div>
                         </div>
@@ -250,18 +254,18 @@
                             <div class="d-flex justify-content-center flex-column">
                                 <h4 class="font-weight-bold text-center">Design</h4>
                                 <p class="text-center">
-                                    every freelancer needs a website to attract new customers, 
-                                    find work and show off your skills. Build your own 
-                                    portfolio with no coding required.
+                                    har bir freelancer yangi mijozlarni jalb qilish, ish topish va mahoratingizni 
+                                    namoyish qilish uchun veb-saytga muhtoj. Kodlash talab qilinmasdan 
+                                    o'zingizning portfelingizni yarating.
                                 </p>
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.student.student_portfolio.all %}
-                                        <a href="{% url 'portfolio_2:portfolio' %}" class="text-center w-100"> start portfolio </a>
+                                        <a href="{% url 'portfolio_2:portfolio' %}" class="text-center w-100"> portfolio qo'shing </a>
                                     {% else %}
-                                        <a href="{% url 'portfolio_2:portfolio' %}" class="text-center w-100"> start portfolio </a>
+                                        <a href="{% url 'portfolio_2:portfolio' %}" class="text-center w-100"> portfolio qo'shing </a>
                                     {% endif %}
                                 {% else %}
-                                    <a href="{% url 'login' %}" class="text-center w-100"> start portfolio </a>
+                                    <a href="{% url 'login' %}" class="text-center w-100"> portfolio qo'shing </a>
                                 {% endif %}
                             </div>
                         </div>

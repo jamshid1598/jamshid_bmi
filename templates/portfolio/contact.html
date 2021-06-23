@@ -11,7 +11,7 @@
 
 
     {% block title %}
-        <title>Contact</title>
+        <title>Aloqa</title>
     {% endblock title %}
 
 
@@ -25,37 +25,34 @@
         <div class="row">
             <div class="col-10 col-sm-8 col-md-7 col-lg-5 m-auto">
                 <div class="">
-                    <!-- <h2 class="text-center">Sign Up</h2>
-                    <p class="text-center mt-2 mb-4 text-black-50">Create an Account, it's free </p>
-                     -->
                     <form action="" method='POST' >
                         {% csrf_token %}
                         <!-- {{ form.non_field_errors }} -->
                         <div class="form-group">
-                            <label for="exampleInputFullName1">Full Name</label>
+                            <label for="exampleInputFullName1">FISH</label>
                             <!-- {{ form.full_name.errors }}
                             {{ form.full_name }} -->
                             <input type="text" id="exampleInputFullName1" name="exampleInputFullName1" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email</label>
+                            <label for="exampleInputEmail1">Elektron Pochta</label>
                             <!-- {{ form.email.errors }}
                             {{ form.email }} -->
                             <input type="text" id="exampleInputEmail1" name="exampleInputEmail1" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPhoneNumber">Phone Number</label>
+                            <label for="exampleInputPhoneNumber">Telefon Raqam</label>
                             <!-- {{ form.phone_number.errors }}
                             {{ form.phone_number }} -->
                             <input type="text" id="exampleInputPhoneNumber" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputText">Your Feedback</label>
+                            <label for="exampleInputText">Xabar</label>
                             <!-- {{ form.text.errors }}
                             {{ form.text }} -->
                             <textarea  class="form-control" id='exampleInputText' name='exampleInputText' ></textarea>
                         </div>
-                        <button class="btn btn-primary my-3 py-2" type='submit' style="border-radius: 20px; width: 100%;">Send</button>
+                        <button class="btn btn-primary my-3 py-2" type='submit' style="border-radius: 20px; width: 100%;">Yuborish</button>
                     </form>
                 </div>
             </div>
