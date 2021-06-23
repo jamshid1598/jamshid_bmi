@@ -32,23 +32,23 @@
             <div class="col-10 col-sm-8 col-md-7 col-lg-5 m-auto">
                <div class="">
                    <h2 class="text-center">Login</h2>
-                   <p class="text-center mt-2 mb-4 text-black-50">Welcome Back! Login with your Credentials</p>
+                   <p class="text-center mt-2 mb-4 text-black-50">Hush kelibsiz</p>
                    <form method="POST" action="">
                        {% csrf_token %}
                        {{ form.non_field_errors }}
                         <div class="form-group">
-                            <label for="id_email">Email</label>
+                            <label for="id_email">Elektron Pochta</label>
                             {{ form.email.errors }}
                             {{ form.email }}
                         </div>
                         <div class="form-group">
-                            <label for="id_password">Password</label>
+                            <label for="id_password">Parol</label>
                             {{ form.password.errors }}
                             {{ form.password }}
-                            <small><a href="{% url 'password_reset' %}" class="form-text text-primary">forgot password?</a></small>
+                            <small><a href="{% url 'password_reset' %}" class="form-text text-primary">parolni esdan chiqardingizmi?</a></small>
                         </div>
-                       <button class="btn btn-primary my-3 py-2" type='submit' style="border-radius: 20px; width: 100%;">login</button>
-                       <p class="text-center">Dont have an account? <a href="{% url 'signup' %}" class="text-decoration-none text-muted font-weight-bold">Sign Up</a></p>
+                       <button class="btn btn-primary my-3 py-2" type='submit' style="border-radius: 20px; width: 100%;">kirish</button>
+                       <p class="text-center">Allaqachon akountingiz mavjud bo'lsa? <a href="{% url 'signup' %}" class="text-decoration-none text-muted font-weight-bold">Login</a></p>
                    </form>
                </div>
             </div>
