@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+    {% block css %}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">        
+    {% endblock css %}
+
+    {% block title %}
+        <title>Document</title>          
+    {% endblock title %}
+
+    {% block body %}
+        
+    <header class="header-section" style="height: auto;">
+        {% include 'includes/navbar_2.html' %}
+    </header>
+
+    <section class="container" style="margin-top: 110px; margin-bottom: 100px;">
+        
+        {% include 'includes/message.html' %}
+
+        <div class="row">
+            <div class="col-10 col-sm-8 col-md-7 col-lg-5 m-auto">
+                <div class="">
+                    <h2 class="text-center">Sign Up</h2>
+                    <p class="text-center mt-2 mb-4 text-black-50">Create an Account, it's free </p>
+                    <form action="" method='POST' >
+                        {% csrf_token %}
+                        {{ form.non_field_errors }}
+                        <div class="form-group">
+                            <label for="exampleInputFullName1">Full Name</label>
+                            {{ form.full_name.errors }}
+                            {{ form.full_name }}
+                            <!-- <input type="email" class="form-control" id="exampleInputFullName1" placeholder="e.x: John Doe"> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email</label>
+                            {{ form.email.errors }}
+                            {{ form.email }}
+                            <!-- <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPhoneNumber">Phone Number</label>
+                            {{ form.phone_number.errors }}
+                            {{ form.phone_number }}
+                            <!-- <input type="text" class="form-control" id="exampleInputPhoneNumber" placeholder="Enter phone-number"> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            {{ form.password1.errors }}
+                            {{ form.password1 }}
+                            <!-- <input type="password" name='password1' class="form-control" id="exampleInputPassword1" placeholder="Password"> -->
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Conform Password</label>
+                            {{ form.password2.errors }}
+                            {{ form.password2 }}
+                            <!-- <input type="password" name='password2' class="form-control" id="exampleInputPassword1" placeholder="Password"> -->
+                        </div>
+                        <button class="btn btn-primary my-3 py-2" type='submit' style="border-radius: 20px; width: 100%;">Sign Up</button>
+                        <p class="text-center">Already have an account <a href="{% url 'login' %}" class="text-decoration-none text-muted font-weight-bold">login</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'includes/footer.html' %}
+    
+    {% endblock body %}
+
+    {% block js %}
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="{% static 'js/index.js' %}" async defer></script>    
+
+    {% endblock js %}

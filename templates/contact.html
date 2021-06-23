@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+
+    {% block css %}
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'bootstrap-4.5.3-dist/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% endblock css %}
+
+
+    {% block title %}
+        <title></title>
+    {% endblock title %}
+
+
+    {% block body %}
+
+        <section class="container" style="margin-top: 110px; margin-bottom: 100px;">
+
+        {% include 'includes/navbar_2.html' %}
+
+        {% include 'includes/message.html' %}
+
+            <div class="row">
+                <div class="col-10 col-sm-8 col-md-7 col-lg-5 m-auto">
+                    <div class="">
+                        <!-- <h2 class="text-center">Sign Up</h2>
+                        <p class="text-center mt-2 mb-4 text-black-50">Create an Account, it's free </p>
+                         -->
+                        <form action="" method='POST' >
+                            {% csrf_token %}
+                            {{ form.non_field_errors }}
+                            <div class="form-group">
+                                <label for="exampleInputFullName1">Full Name</label>
+                                {{ form.full_name.errors }}
+                                {{ form.full_name }}
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                {{ form.email.errors }}
+                                {{ form.email }}
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPhoneNumber">Phone Number</label>
+                                {{ form.phone_number.errors }}
+                                {{ form.phone_number }}
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputText">Conform Password</label>
+                                {{ form.text.errors }}
+                                {{ form.text }}
+                            </div>
+                            <button class="btn btn-primary my-3 py-2" type='submit' style="border-radius: 20px; width: 100%;">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        {% include 'includes/footer.html' %}
+
+    {% endblock body %}
+
+
+    {% block js %}
+
+        <script src="{% static 'bootstrap-4.5.3-dist/jquery-3.6.0.min.js' %}"></script>
+        <script src="{% static 'bootstrap-4.5.3-dist/popper.js' %}"></script>
+        <script src="{% static 'bootstrap-4.5.3-dist/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/index.js' %}" async defer></script>
+        
+    {% endblock js %}
+
+
+
+
+
+

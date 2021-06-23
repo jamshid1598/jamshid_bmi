@@ -1,0 +1,311 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header-section {
+  width: 100%;
+  height: 100vh;
+}
+
+.header-section .navbar {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.header-section .header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("https://cdn.hipwallpaper.com/i/0/78/IfWKxJ.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.header-section .header-content .left-item {
+  width: 50%;
+  height: 100vh;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media all and (max-width: 992px) {
+  .header-section .header-content .left-item {
+    width: 100%;
+  }
+}
+
+.header-section .header-content .right-item {
+  width: 50%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+@media all and (max-width: 992px) {
+  .header-section .header-content .right-item {
+    display: none;
+  }
+}
+
+.footer-section a {
+  color: white;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  border-bottom: 2px solid transparent;
+}
+
+.footer-section a:hover {
+  border-bottom: 2px solid white;
+}
+
+.footer-section p {
+  color: white;
+  font-weight: bold;
+}
+
+.footer-section i {
+  font-size: 30px;
+}
+
+.body-section .types-section {
+  width: 100%;
+  background-image: url("https://www.polisjerusalem.org/wp-content/uploads/laptop-computer-keyboard-technology.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.body-section .types-section .bg-box {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.body-section .types-section .bg-box .inner-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 150px;
+  border-radius: 10px;
+  border: 2px solid lightslategrey;
+}
+
+.body-section .types-section .bg-box .inner-item i {
+  color: white;
+  font-size: 70px;
+}
+
+.body-section .responsive-section p {
+  width: 50%;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+@media all and (max-width: 992px) {
+  .body-section .responsive-section p {
+    width: 100%;
+  }
+  
+}
+
+.about_me{
+  height: 90vh;
+  width: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.3),rgba(255,255,255,.3)), url("../image/bg-2.jpg");
+  background-size:cover;
+}
+
+.body-section .make-section .left-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 400px;
+}
+
+.body-section .faq-section .acc-box .acc-top {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.body-section .faq-section .acc-box .acc-top:hover {
+  background-color: #e9e8e8;
+  cursor: pointer;
+}
+
+.body-section .faq-section .acc-box .acc-top i {
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.body-section .faq-section .acc-box .acc-top .acc-icon-active {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.body-section .faq-section .acc-box .acc-bottom {
+  display: none;
+}
+.card_img{
+  position: relative;
+  overflow: hidden;
+}
+
+ .card_img_title{
+  opacity : 0; 
+  transition:opacity 0.5s ;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color:rgba(5, 5, 5, 1);
+}
+
+.card_button{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.card_button .card_button_img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  /* opacity: 0; */
+  transform: translate(-50%,-50%);
+  
+}
+
+.card_img_title_1{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 15%;
+  /* transform: translateY(-25%); */
+}
+
+.card_img_title_2{
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  transform: translateY(-10%);    
+  z-index: 1;
+}
+  .card_img_title_2 button{
+    width: 30%;
+  }
+
+.card_img:hover  .card_img_title{
+  opacity: 1;
+ }
+
+ /* sourceMappingURL=style.css.map */
+
+
+
+
+
+
+ /* carusel */
+
+
+/* Make the images wide and responsive. */
+.carousel-inner img {
+  height: auto;
+  width: 100%;
+}
+
+/* Decorations */  
+/* .carousel {
+  margin-bottom: 20px;
+  margin-top: 20px;
+} */
+
+
+.button_shedow{
+  width: 115%;
+  transition: .3s;
+  border-radius: 3px; 
+  background: linear-gradient(to right,rgb(62, 212, 212), teal);
+}
+.button_shedow:hover{
+  box-shadow: -22px 10px 10px 3px rgba(0,0,0,.5);
+  background: linear-gradient(to left,rgb(62, 212, 212), teal); 
+}
+
+.button_shedow i{
+  margin-left: 45%;
+}
+
+.about_me{
+  display: flex;
+  align-content:center;
+  justify-content: center;
+}
+
+.about_me .about_image_me img{
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 10px solid rgba(0, 0, 0, 0.4);
+}
+
+.border_box{
+  position: relative;
+}
+.border_box::after{
+  content: '';
+  position:absolute;
+  height: 100%;
+  width: 3px;
+  top: 0;
+  left: -25px;
+  background: rgb(145, 145, 236);
+
+z-index: 0;}
+
+
+.education_box ul li{
+  line-height: 1.3;
+  font-size: 13px;
+}

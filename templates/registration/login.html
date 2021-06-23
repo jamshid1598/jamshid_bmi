@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block css %}
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    {% endblock css %}
+
+    {% block title %} <title>Login</title> {% endblock title %}
+   
+
+    {% block body %}
+        
+
+    <header class="header-section" style="height: auto;">
+        
+        {% include 'includes/navbar_2.html' %}
+
+    </header>
+
+
+
+    <section class="container" style="margin-top: 150px; margin-bottom: 150px;">
+
+        {% include 'includes/message.html' %}
+
+        <div class="row">
+            <div class="col-10 col-sm-8 col-md-7 col-lg-5 m-auto">
+               <div class="">
+                   <h2 class="text-center">Login</h2>
+                   <p class="text-center mt-2 mb-4 text-black-50">Welcome Back! Login with your Credentials</p>
+                   <form method="POST" action="">
+                       {% csrf_token %}
+                       {{ form.non_field_errors }}
+                        <div class="form-group">
+                            <label for="id_email">Email</label>
+                            {{ form.email.errors }}
+                            {{ form.email }}
+                        </div>
+                        <div class="form-group">
+                            <label for="id_password">Password</label>
+                            {{ form.password.errors }}
+                            {{ form.password }}
+                            <small><a href="{% url 'password_reset' %}" class="form-text text-primary">forgot password?</a></small>
+                        </div>
+                       <button class="btn btn-primary my-3 py-2" type='submit' style="border-radius: 20px; width: 100%;">login</button>
+                       <p class="text-center">Dont have an account? <a href="{% url 'signup' %}" class="text-decoration-none text-muted font-weight-bold">Sign Up</a></p>
+                   </form>
+               </div>
+            </div>
+        </div>
+    </section>
+
+
+   {% include 'includes/footer.html' %}
+
+    {% endblock body %}
+
+    {% block js %}
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="{% static 'js/index.js' %}" async defer></script>
+        
+    {% endblock js %}

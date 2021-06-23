@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block css %}
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        
+    {% endblock css %}
+
+    {% block title %} <title> Home </title> {% endblock title %}
+
+    {% block body %}
+
+        <header class="header-section" style="height: auto;">
+            {% include 'includes/navbar_2.html' %}
+        </header>
+
+        <section class="container" style="margin-top: 100px; margin-bottom: 50px;">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <h1>How to Create an Online Portfolio:<br> The Ultimate Guide</h1>
+                    <video width="100%" controls>
+                        <source src="{% static 'videos/8-Tips-for-Writing-a-Winning-Resume.mp4' %}" type="video/mp4">
+                        <!-- <source src="{% static 'videos/8-Tips-for-Writing-a-Winning-Resume.mp4' %}" type="video/ogg"> -->
+                        Your browser does not support the video tag.
+                    </video>
+                    <h4 class="pt-3 pb-3"><i class="text-secondary ">This post was last updated on January 21, 2021.</i></h4>
+                    <div class="font-weight-bold" style="border-left: 2px solid #0275d8;">
+                    <h3 class="pl-4 pt-2 pb-2">
+                        Having a sharp online portfolio is a must for every designer. Here are ten steps to creating a website that truly expresses your unique style.
+                    </h3> 
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptates nostrum dicta fugit fuga ipsum hic perferendis ab ut dolorum est eaque, amet a provident cupiditate, vero possimus officia perspiciatis.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptates nostrum dicta fugit fuga ipsum hic perferendis ab ut dolorum est eaque, amet a provident cupiditate, vero possimus officia perspiciatis.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptates nostrum dicta fugit fuga ipsum hic perferendis ab ut dolorum est eaque, amet a provident cupiditate, vero possimus officia perspiciatis.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptates nostrum dicta fugit fuga ipsum hic perferendis ab ut dolorum est eaque, amet a provident cupiditate, vero possimus officia perspiciatis.</p>
+                    <h2>How to create an online portfolio</h2>
+                    <ol class="ml-3">
+                        <li start="1"><a href="">Gather inspiration </a></li>
+                        <li ><a href="">Choose a template </a></li>
+                        <li ><a href="">Showcase your best projects  </a></li>
+                        <li ><a href="">Use high quality images  </a></li>
+                        <li ><a href="">Include the right content and features </a></li>
+                        <li ><a href="">Make it mobile friendly </a></li>
+                        <li ><a href="">Ask for honest feedback  </a></li>
+                    </ol>
+                    <h3>01. Gather inspiration</h3>
+                    <p>Creating a portfolio begins with some visual research. Whichever field you’re in, looking around at other online portfolio websites will provide you with plenty of inspiration and generate some initial ideas. It’s especially recommended to take a look at websites by other people in your specific creative niche or industry.</p>
+                    <p>Creating a portfolio begins with some visual research. Whichever field you’re in, looking around at other online portfolio websites will provide you with plenty of inspiration and generate some initial ideas. It’s especially recommended to take a look at websites by other people in your specific creative niche or industry.</p>
+                    <h3>02. Gather inspiration</h3>
+                    <p>Creating a portfolio begins with some visual research. Whichever field you’re in, looking around at other online portfolio websites will provide you with plenty of inspiration and generate some initial ideas. It’s especially recommended to take a look at websites by other people in your specific creative niche or industry.</p>
+                    <img src="{% static 'image/anete-lusina-zwsHjakE_iI-unsplash.jpg' %}" width="100%" class="mb-3" alt="">
+                    <p>Creating a portfolio begins with some visual research. Whichever field you’re in, looking around at other online portfolio websites will provide you with plenty of inspiration and generate some initial ideas. It’s especially recommended to take a look at websites by other people in your specific creative niche or industry.</p>
+                    <h3>03. Gather inspiration</h3>
+                    <p>Creating a portfolio begins with some visual research. Whichever field you’re in, looking around at other online portfolio websites will provide you with plenty of inspiration and generate some initial ideas. It’s especially recommended to take a look at websites by other people in your specific creative niche or industry.</p>
+                    <p>Creating a portfolio begins with some visual research. Whichever field you’re in, looking around at other online portfolio websites will provide you with plenty of inspiration and generate some initial ideas. It’s especially recommended to take a look at websites by other people in your specific creative niche or industry.</p>
+                    <h3>01. Gather inspiration</h3>
+                    <p>Creating a portfolio begins with some visual research. Whichever field you’re in, looking around at other online portfolio websites will provide you with plenty of inspiration and generate some initial ideas. It’s especially recommended to take a look at websites by other people in your specific creative niche or industry.</p>
+                    <p>Creating a portfolio begins with some visual research. Whichever field you’re in, looking around at other online portfolio websites will provide you with plenty of inspiration and generate some initial ideas. It’s especially recommended to take a look at websites by other people in your specific creative niche or industry.</p>
+                    <h3>01. Gather inspiration</h3>
+                    <p>Creating a portfolio begins with some visual research. Whichever field you’re in, looking around at other online portfolio websites will provide you with plenty of inspiration and generate some initial ideas. It’s especially recommended to take a look at websites by other people in your specific creative niche or industry.</p>
+                    <p>Creating a portfolio begins with some visual research. Whichever field you’re in, looking around at other online portfolio websites will provide you with plenty of inspiration and generate some initial ideas. It’s especially recommended to take a look at websites by other people in your specific creative niche or industry.</p>
+                </div>
+            </div>
+        </section>
+
+        {% include 'includes/footer.html' %}
+
+    {% endblock body %}
+
+    {% block js %}
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="{% static 'js/index.js' %}" async defer></script>
+
+    {% endblock js %}

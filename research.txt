@@ -1,0 +1,7 @@
+subdomain => https://medium.com/crowdbotics/how-to-use-dynamic-subdomains-in-django-dc1cb2cac00b
+
+upload files with django/js => https://sayari3.com/articles/20-how-to-upload-media-files-with-django-and-javascript-fetch-api/
+
+                  django/ajax => https://programmer.group/ajax-and-from-upload-file-example-django-project.html
+
+                  django/ajax => https://learnbatta.com/blog/django-image-and-file-upload-using-ajax-21/

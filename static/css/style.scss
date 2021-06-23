@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header-section {
+  width: 100%;
+  height: 100vh;
+
+  .navbar {
+    transition: all 0.2s linear;
+  }
+
+  .header-content {
+    display: flex;
+
+    background-image: url("https://cdn.hipwallpaper.com/i/0/78/IfWKxJ.jpg");
+    background-size: cover;
+    background-position: center;
+    // background-attachment: fixed;
+    // filter: blur(15px);
+
+    .left-item {
+      width: 50%;
+      height: 100vh;
+      //   background-color: red;
+      transition: all 0.2s linear;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      flex-direction: column;
+
+      @media all and (max-width: 992px) {
+        width: 100%;
+      }
+    }
+
+    .right-item {
+      width: 50%;
+      height: 100vh;
+      //   background-color: yellow;
+      //   background-image: url("https://images.squarespace-cdn.com/content/v1/51c9a023e4b0177708d078b2/1421857734540-QAGMV9A2MHGHQCGKNV9F/ke17ZwdGBToddI8pDm48kNvT88LknE-K9M4pGNO0Iqd7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1USOFn4xF8vTWDNAUBm5ducQhX-V3oVjSmr829Rco4W2Uo49ZdOtO_QXox0_W7i2zEA/Portfolio+images.001.jpg?format=2500w");
+      background-size: cover;
+      background-position: center;
+      @media all and (max-width: 992px) {
+        display: none;
+      }
+    }
+  }
+}
+
+.footer-section {
+  a {
+    color: white;
+    transition: all 0.2s linear;
+    border-bottom: 2px solid transparent;
+    &:hover {
+      border-bottom: 2px solid white;
+    }
+  }
+  p {
+    color: white;
+    font-weight: bold;
+  }
+
+  i {
+    font-size: 30px;
+  }
+}
+
+.body-section {
+  .types-section {
+    width: 100%;
+
+    background-image: url("https://www.polisjerusalem.org/wp-content/uploads/laptop-computer-keyboard-technology.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    .bg-box {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+
+      .inner-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        height: 150px;
+        border-radius: 10px;
+        border: 2px solid lightslategrey;
+
+        i {
+          color: white;
+          font-size: 70px;
+        }
+      }
+    }
+  }
+
+  .responsive-section {
+    p {
+      width: 50%;
+      transition: all 0.2s linear;
+      @media all and (max-width: 992px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .make-section {
+    .left-item {
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 400px;
+      }
+    }
+  }
+
+  .faq-section {
+    .acc-box {
+      .acc-top {
+        transition: all 0.2s linear;
+        &:hover {
+          background-color: rgb(233, 232, 232);
+          cursor: pointer;
+        }
+
+        i {
+          transition: all 0.2s linear;
+        }
+        .acc-icon-active {
+          transform: rotate(45deg);
+        }
+      }
+
+      .acc-bottom {
+        display: none;
+      }
+    }
+  }
+}

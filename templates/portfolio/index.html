@@ -1,0 +1,830 @@
+{% extends "portfolio/base.html" %}
+{% load static %}
+
+
+    {% block css %}
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="{% static 'bootstrap-4.5.3-dist/css/bootstrap.min.css' %}">
+        <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"> -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+    {% endblock css %}
+
+
+    {% block title %}
+            
+    {% endblock title %}
+
+
+
+    {% block body %}
+
+        {% include 'portfolio/includes/navbar.html' %}
+
+        {% include 'portfolio/includes/message.html' %}
+            
+        <section class="about_me row">
+
+            <div class="about_image_me col-6">
+                <div class="d-flex justify-content-center"><img src="{% static 'image/user.jpg' %}" alt=""></div>
+                <div class="" style="">
+                    <h1 class="text-center text-white" style="font-size: 50px;">Dovurov Jamshid</h1>
+                    <p class="text-light text-center" style="font-size:20px">Web Developer</p>
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid" style="">
+            <div class="container">
+            <div class="row p-5">
+                <div class="col-12 col-sm-3">
+                    <h2 class="font-weight-lighter text-center text-sm-left"> About me</h2>
+                </div>
+                <div class="col-12 col-sm-9 px-5">
+                    <p class="text-center text-sm-left" style="color: #74808a;">
+                        I'm a Back-End Developer for Marvel Creative in Tashkent, Uzbekistan. 
+                        Since beginning my journey as a freelance as a Python Django Developer 
+                        where I can fully utilize my skills in HTML, JavaScript, CSS, Python 
+                        and Django technologies, I've done remote work for Instant Company and 
+                        collaborated with talented people to create digital products for consumer use. 
+                    </p>
+                </div>
+                
+            </div>
+            <div class="col-12 d-flex justify-content-end">
+                <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal">
+                    Edit
+                  </button>
+            </div>
+        </div>
+        </section>
+        <section class="container-fluid" style="background: #f2f2f5;">
+            <div class="container">
+                 <h2 class="font-weight-lighter text-center pt-5 pb-4">Experience</h2>
+            
+                <div class="row">
+                    <div class="col-12 my-4">
+                                <div class="row">
+                                    <div class="col-12 col-sm-4 mb-3  mr-5 text-right">
+                                        <small>September 2020 – January 2021 
+                                        </small>
+                                    </div>
+                                    <div class="col-12 col-sm-6 p-0 m-0 border_box">
+                                        <div class="card m-0 p-0">
+                                            <div class="card-body">
+                                                <h4 class="font-weight-lighter m-0">Instant Company</h4>
+                                                <h5 class="text-black-50 font-weight-lighter">Web Back-End Developer (as Freelance)</h5>
+                                                <ul class="pl-4">
+                                                    <li style="font-size: 14px;"> Designed and configured database and back end applications and
+                                                        programs.</li>
+                                                    <li style="font-size: 14px;">Performed research to explore and identify new technological
+                                                        platforms</li>
+                                                    <li style="font-size: 14px;">Collaborated with internal teams to convert end user feedback into
+                                                        meaningful and improved solutions.</li>
+                                                    <li style="font-size: 14px;">Resolved ongoing problems and accurately documented progress of
+                                                        Python project</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                      </div>
+                      
+                          
+                      <div class="col-11 offset-11">
+                        <button class="btn btn-outline-dark " data-toggle="modal" data-target="#experiencemodal">add</button>
+                      </div>
+                     
+                </div>
+            </div>
+        </section>
+        
+        <section class="container-fluid">
+            <h2 class="font-weight-lighter text-center pt-5 pb-4 ">Education</h2>
+            <div class="row education_box d-flex justify-content-center" >
+                <div class="col-7 my-4">
+                    <div class="card p-3">
+                        <div class="row ">
+                            <div class="col-9 m-0"><h6 class="m-0" style="font-size: 15px; color: rgb(97, 94, 94);">Tashkent University of Information Technologies <a href="">(tatu.uz)</a></h6></div>
+                            <div class="col-3 text-right m-0"><small class="m-0">Sept 2017 - Current</small></div>
+                        </div>
+                        <p class="m-0 text-black-50" style="font-size: 14px;"> Software Engineering (includes Systematic and Practical Programming)</p>
+                        <div class="col-11 offset-10">
+                            <button class="btn btn-outline-dark " data-toggle="modal" data-target="#achivment">Achivment</button>
+                          </div>
+                    </div>
+                </div>
+                <div class="col-7 my-4">
+                    <div class="card p-3">
+                        <div class="row ">
+                            <div class="col-9 m-0"><h6 class="m-0" style="font-size: 15px; color: rgb(97, 94, 94);">Unitec School</h6></div>
+                            <div class="col-3 text-right m-0"><small class="m-0">Feb 2019 - March 15, 2019</small></div>
+                        </div>
+                        <p class="m-0 text-black-50" style="font-size: 14px;"> Python/Django OOP</p>
+                        <ul class="px-3 pt-3 m-0">
+                            <li class="text-black-50" style="font-size: 14px;">Python, OOP, Django</li>
+                        </ul>
+                    </div>
+                </div>
+              
+            </div>
+            <div class="container">
+            <div class='row'>
+                <div class="col-11 offset-11">
+                    <button class="btn btn-outline-dark" data-toggle="modal" data-target="#educationmodal">add</button>
+                  </div>
+            </div>
+        </div>
+        </section>
+
+ 
+  
+  <!-- Modal -->
+  <div class="modal fade" id="experiencemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Experience</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form method='post' enctype="multipart/form-data" action="{% url 'portfolio_2:student-form' %}">
+                <input type="hidden" id="student_id" value='' style="width: 100%;" name='student'>
+                {% csrf_token %}
+                <div class="form-group my-1">
+                    <label for="company_name">Company Name</label>
+                    <input type="text" class="form-control" id='company_name' name="company_name">
+                </div> 
+                <div class="form-group my-1">
+                    <label for="occupation">Occupation</label>
+                    <input type="text" class="form-control" id='occupation' name="occupation">
+                </div>
+                <div class="form-group my-1">
+                    <label for="qualification">Qualification</label>
+                    <textarea type="text" class="form-control" id='qualification' name="qualification"></textarea>
+                </div> 
+                
+                <div class="form-group  d-flex justify-content-around my-2">
+                   <div>
+                    <label for="start">Start date:</label>
+                    <input type="date" id="start" name="trip-start"
+                           value="2018-07-22"
+                           min="2018-01-01" max="2018-12-31"></div>
+
+                        <div>
+                           <label for="start">End date:</label>
+                           <input type="date" id="start" name="trip-start"
+                                  value="2018-07-22"
+                                  min="2018-01-01" max="2018-12-31">
+                                </div>
+                </div> 
+                
+                
+              
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                  </div>
+                  
+            </form>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">About Me</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form method='post' enctype="multipart/form-data" action="{% url 'portfolio_2:student-form' %}">
+                <input type="hidden" id="student_id" value='' style="width: 100%;" name='student'>
+                {% csrf_token %}
+                <div class="custom-file mb-5">
+                    <label for="yourimage" class="m-0" >Upload your image</label>
+                    <div class="btn m-0" style="width: 100%; background-color:gray;color:white;">  
+                        <input type="file" id="yourimage" style="width: 100%;", name='image'>
+                    </div>
+                </div>
+                <div class="custom-file mb-5">
+                    <label for="bacgraundimage" class="m-0">Upload backgraund image(optional)</label>
+                    <div class="btn m-0" style="width: 100%; background-color:gray;color:white;">  
+                        <input type="file" id="bacgraundimage" style="width: 100%;" name='bg_image'>
+                    </div>
+                </div>
+                <div class="form-group my-1">
+                    <label for="career">Career</label>
+                    <input type="text" class="form-control" id='career' name="career">
+                </div> 
+                <div class="form-group my-1">
+                    <label for="about_me" class="col-form-label">About me</label>
+                    <textarea  class="form-control" id='about_me' name='about_me' ></textarea>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                  </div>
+                  
+            </form>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  <div class="modal fade" id="educationmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Education</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form method='post' enctype="multipart/form-data" action="{% url 'portfolio_2:student-form' %}">
+                  <input type="hidden" id="student_id" value='' style="width: 100%;" name='student'>
+                  {% csrf_token %}
+                  <div class="form-group my-1">
+                      <label for="otm_or_place_of_education">Institution/Place of Education</label>
+                      <input type="text" class="form-control" id='otm_or_place_of_education' name="otm_or_place_of_education">
+                  </div> 
+                  <div class="form-group my-1">
+                      <label for="faculty_or_subject">Faculty/Subject</label>
+                      <input type="text" class="form-control" id='faculty_or_subject' name="faculty_or_subject">
+                  </div>
+                  <div class="form-group my-1">
+                      <label for="learned_skill">Learned Skills</label>
+                      <textarea type="text" class="form-control" id='learned_skill' name="learned_skill"></textarea>
+                  </div> 
+                  
+                  <div class="form-group  d-flex justify-content-around my-2">
+                     <div>
+                      <label for="start">Start date:</label>
+                      <input type="date" id="start" name="trip-start"
+                             value="2018-07-22"
+                             min="2018-01-01" max="2018-12-31"></div>
+  
+                          <div>
+                             <label for="start">End date:</label>
+                             <input type="date" id="start" name="trip-start"
+                                    value="2018-07-22"
+                                    min="2018-01-01" max="2018-12-31">
+                                  </div>
+                  </div> 
+                  
+                  
+                
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                    
+              </form>
+  
+          </div>
+          
+        </div>
+      </div>
+  </div>
+        
+
+  <div class="modal fade" id="achivment"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="max-width: 1200px !important;" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Achivment</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">1-kurs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tabs-2" role="tab">2-kurs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab">3-kurs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tabs-4" role="tab">4-kurs</a>
+                </li>
+            </ul><!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                    <table class="table">
+                        <tr>
+                            <th>No</th>
+                            <th>Fan nomi</th>
+                            <th>Joriy nazorat(JN)</th>
+                            <th>Oraliq nazorat(ON)</th>
+                            <th>ΣJN+ΣON</th>
+                            <th>Yakuniy nazorat</th>
+                            <th>Jami</th>
+                            <th>O'zlashtirish ko'rsatkichi</th>
+                            <th>Baho</th>
+                        </tr>
+                       
+                        <tr>
+                            <td>1</td>
+                            <td style="text-transform:capitalise;">
+                                Chet tili										</td>
+                            <td>65</td>
+                            <td></td>
+                            <td>65</td>
+                            <td>22</td>
+                            <td>87</td>
+                            <td>28</td>
+                            <td>5</td>
+                        </tr>
+
+                                                            <tr>
+                            <td>2</td>
+                            <td style="text-transform:capitalise;">
+                                Bitiruv oldi amaliyoti										</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>80</td>
+                            <td>80</td>
+                            <td></td>
+                            <td>4</td>
+                        </tr>
+
+                                                            <tr>
+                            <td>3</td>
+                            <td style="text-transform:capitalise;">
+                                Mathlab да дастурлаш 										</td>
+                            <td>29</td>
+                            <td>29</td>
+                            <td>58</td>
+                            <td>23</td>
+                            <td>81</td>
+                            <td>102</td>
+                            <td>4</td>
+                        </tr>
+
+                                                            <tr>
+                            <td>4</td>
+                            <td style="text-transform:capitalise;">
+                                Дастурий таъминот архитектураси 										</td>
+                            <td>18</td>
+                            <td>28</td>
+                            <td>46</td>
+                            <td>26</td>
+                            <td>72</td>
+                            <td>49</td>
+                            <td>4</td>
+                        </tr>
+
+                                                            <tr>
+                            <td>5</td>
+                            <td style="text-transform:capitalise;">
+                                Дастурий таъминотни моделлаштириш ва дизайни 										</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>57</td>
+                            <td>20</td>
+                            <td>77</td>
+                            <td>60</td>
+                            <td>4</td>
+                        </tr>
+
+                                                            <tr>
+                            <td>6</td>
+                            <td style="text-transform:capitalise;">
+                                Дастурий таъминот учун талаблар ишлаб чиқиш 										</td>
+                            <td>23</td>
+                            <td>17</td>
+                            <td>40</td>
+                            <td>18</td>
+                            <td>58</td>
+                            <td>38</td>
+                            <td>3</td>
+                        </tr>
+
+                                                            <tr>
+                            <td>7</td>
+                            <td style="text-transform:capitalise;">
+                                Tizimli tahlil va talablar										</td>
+                            <td>20</td>
+                            <td>28</td>
+                            <td>48</td>
+                            <td>24</td>
+                            <td>72</td>
+                            <td>56</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td style="text-transform:capitalise;">
+                                Робот дастурий таъминоти										
+                            </td>
+                            <td>22</td>
+                            <td>26</td>
+                            <td>48</td>
+                            <td>23</td>
+                            <td>71</td>
+                            <td>67</td>
+                            <td>4</td>
+                        </tr>                                  
+                    </table>
+                </div>
+                <div class="tab-pane" id="tabs-2" role="tabpanel">
+                    <table class="table">
+                        <tr>
+                            <th>No</th>
+                            <th>Fan nomi</th>
+                            <th>Joriy nazorat(JN)</th>
+                            <th>Oraliq nazorat(ON)</th>
+                            <th>ΣJN+ΣON</th>
+                            <th>Yakuniy nazorat</th>
+                            <th>Jami</th>
+                            <th>O'zlashtirish ko'rsatkichi</th>
+                            <th>Baho</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td style="text-transform:capitalise;">
+                                Chet tili										
+                            </td>
+                            <td>65</td>
+                            <td></td>
+                            <td>65</td>
+                            <td>22</td>
+                            <td>87</td>
+                            <td>28</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td style="text-transform:capitalise;">
+                                Bitiruv oldi amaliyoti								
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>80</td>
+                            <td>80</td>
+                            <td></td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td style="text-transform:capitalise;">
+                                Mathlab да дастурлаш 										
+                            </td>
+                            <td>29</td>
+                            <td>29</td>
+                            <td>58</td>
+                            <td>23</td>
+                            <td>81</td>
+                            <td>102</td>
+                            <td>4</td>
+                        </tr>
+
+                                                            <tr>
+                            <td>4</td>
+                            <td style="text-transform:capitalise;">
+                                Дастурий таъминот архитектураси 										</td>
+                            <td>18</td>
+                            <td>28</td>
+                            <td>46</td>
+                            <td>26</td>
+                            <td>72</td>
+                            <td>49</td>
+                            <td>4</td>
+                        </tr>
+
+                                                            <tr>
+                            <td>5</td>
+                            <td style="text-transform:capitalise;">
+                                Дастурий таъминотни моделлаштириш ва дизайни 										</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>57</td>
+                            <td>20</td>
+                            <td>77</td>
+                            <td>60</td>
+                            <td>4</td>
+                        </tr>
+
+                                                            <tr>
+                            <td>6</td>
+                            <td style="text-transform:capitalise;">
+                                Дастурий таъминот учун талаблар ишлаб чиқиш 										</td>
+                            <td>23</td>
+                            <td>17</td>
+                            <td>40</td>
+                            <td>18</td>
+                            <td>58</td>
+                            <td>38</td>
+                            <td>3</td>
+                        </tr>
+
+                                                            <tr>
+                            <td>7</td>
+                            <td style="text-transform:capitalise;">
+                                Tizimli tahlil va talablar										</td>
+                            <td>20</td>
+                            <td>28</td>
+                            <td>48</td>
+                            <td>24</td>
+                            <td>72</td>
+                            <td>56</td>
+                            <td>4</td>
+                        </tr>
+
+                                                            <tr>
+                            <td>8</td>
+                            <td style="text-transform:capitalise;">
+                                Робот дастурий таъминоти										</td>
+                            <td>22</td>
+                            <td>26</td>
+                            <td>48</td>
+                            <td>23</td>
+                            <td>71</td>
+                            <td>67</td>
+                            <td>4</td>
+                        </tr>
+
+                                                            
+                    </table>
+                </div>
+                <div class="tab-pane" id="tabs-3" role="tabpanel">
+                    <table class="table">
+                        <tr>
+                            <th>No</th>
+                            <th>Fan nomi</th>
+                            <th>Joriy nazorat(JN)</th>
+                            <th>Oraliq nazorat(ON)</th>
+                            <th>ΣJN+ΣON</th>
+                            <th>Yakuniy nazorat</th>
+                            <th>Jami</th>
+                            <th>O'zlashtirish ko'rsatkichi</th>
+                            <th>Baho</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>1</td>
+                            <td style="text-transform:capitalise;">
+                                Chet tili										</td>
+                            <td>65</td>
+                            <td></td>
+                            <td>65</td>
+                            <td>22</td>
+                            <td>87</td>
+                            <td>28</td>
+                            <td>5</td>
+                        </tr>
+
+                                                            <tr>
+                            <td>2</td>
+                            <td style="text-transform:capitalise;">
+                                Bitiruv oldi amaliyoti										</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>80</td>
+                            <td>80</td>
+                            <td></td>
+                            <td>4</td>
+                        </tr>
+
+                                                            <tr>
+                            <td>3</td>
+                            <td style="text-transform:capitalise;">
+                                Mathlab да дастурлаш 										</td>
+                            <td>29</td>
+                            <td>29</td>
+                            <td>58</td>
+                            <td>23</td>
+                            <td>81</td>
+                            <td>102</td>
+                            <td>4</td>
+                        </tr>
+
+                                                            <tr>
+                            <td>4</td>
+                            <td style="text-transform:capitalise;">
+                                Дастурий таъминот архитектураси 										</td>
+                            <td>18</td>
+                            <td>28</td>
+                            <td>46</td>
+                            <td>26</td>
+                            <td>72</td>
+                            <td>49</td>
+                            <td>4</td>
+                        </tr>
+
+                                                            <tr>
+                            <td>5</td>
+                            <td style="text-transform:capitalise;">
+                                Дастурий таъминотни моделлаштириш ва дизайни 										</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>57</td>
+                            <td>20</td>
+                            <td>77</td>
+                            <td>60</td>
+                            <td>4</td>
+                        </tr>
+
+                                                            <tr>
+                            <td>6</td>
+                            <td style="text-transform:capitalise;">
+                                Дастурий таъминот учун талаблар ишлаб чиқиш 										</td>
+                            <td>23</td>
+                            <td>17</td>
+                            <td>40</td>
+                            <td>18</td>
+                            <td>58</td>
+                            <td>38</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td style="text-transform:capitalise;">
+                                Tizimli tahlil va talablar										</td>
+                            <td>20</td>
+                            <td>28</td>
+                            <td>48</td>
+                            <td>24</td>
+                            <td>72</td>
+                            <td>56</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td style="text-transform:capitalise;">
+                                Робот дастурий таъминоти										</td>
+                            <td>22</td>
+                            <td>26</td>
+                            <td>48</td>
+                            <td>23</td>
+                            <td>71</td>
+                            <td>67</td>
+                            <td>4</td>
+                        </tr>                                  
+                    </table>
+                </div>
+                <div class="tab-pane" id="tabs-4" role="tabpanel">
+                    <table class="table">
+                        <tr>
+                            <th>No</th>
+                            <th>Fan nomi</th>
+                            <th>Joriy nazorat(JN)</th>
+                            <th>Oraliq nazorat(ON)</th>
+                            <th>ΣJN+ΣON</th>
+                            <th>Yakuniy nazorat</th>
+                            <th>Jami</th>
+                            <th>O'zlashtirish ko'rsatkichi</th>
+                            <th>Baho</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td style="text-transform:capitalise;">
+                                Chet tili										
+                            </td>
+                            <td>65</td>
+                            <td></td>
+                            <td>65</td>
+                            <td>22</td>
+                            <td>87</td>
+                            <td>28</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td style="text-transform:capitalise;">
+                                Bitiruv oldi amaliyoti										
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>80</td>
+                            <td>80</td>
+                            <td></td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td style="text-transform:capitalise;">
+                                Mathlab да дастурлаш 										
+                            </td>
+                            <td>29</td>
+                            <td>29</td>
+                            <td>58</td>
+                            <td>23</td>
+                            <td>81</td>
+                            <td>102</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td style="text-transform:capitalise;">
+                                Дастурий таъминот архитектураси 										</td>
+                            <td>18</td>
+                            <td>28</td>
+                            <td>46</td>
+                            <td>26</td>
+                            <td>72</td>
+                            <td>49</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td style="text-transform:capitalise;">
+                                Дастурий таъминотни моделлаштириш ва дизайни 										</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>57</td>
+                            <td>20</td>
+                            <td>77</td>
+                            <td>60</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td style="text-transform:capitalise;">
+                                Дастурий таъминот учун талаблар ишлаб чиқиш 										</td>
+                            <td>23</td>
+                            <td>17</td>
+                            <td>40</td>
+                            <td>18</td>
+                            <td>58</td>
+                            <td>38</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td style="text-transform:capitalise;">
+                                Tizimli tahlil va talablar										</td>
+                            <td>20</td>
+                            <td>28</td>
+                            <td>48</td>
+                            <td>24</td>
+                            <td>72</td>
+                            <td>56</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td style="text-transform:capitalise;">
+                                Робот дастурий таъминоти										</td>
+                            <td>22</td>
+                            <td>26</td>
+                            <td>48</td>
+                            <td>23</td>
+                            <td>71</td>
+                            <td>67</td>
+                            <td>4</td>
+                        </tr>                                          
+                    </table>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script>
+        var user_id = "{{ request.user.id }}";
+        document.getElementById('student_id').value=user_id;
+    </script>
+
+        {% include 'portfolio/includes/footer.html' %}
+
+    {% endblock body %}
+
+
+    {% block js %}
+    <script src="{% static 'bootstrap-4.5.3-dist/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'bootstrap-4.5.3-dist/popper.js' %}"></script>
+    <script src="{% static 'bootstrap-4.5.3-dist/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/index.js' %}" async defer></script>
+    <script>
+       
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
+    </script>
+    {% endblock js %}
