@@ -108,24 +108,3 @@ admin.site.register(Portfolio, PortfolioAdmin)
 
 
 
-# class PortfolioDetailAdmin(admin.ModelAdmin):
-
-
-#     list_display       = ('portfolio', )
-#     list_display_links = ('portfolio', )
-#     search_fields      = ('portfolio', )
-#     ordering           = ('portfolio', )
-
-#     fieldsets = (
-#         ('Portfolio Detail', {
-#             "fields": (
-#                 'portfolio', 'description',                
-#             ),
-#         }),
-#     )
-    
-#     formfield_overrides = {
-#         models.TextField : {'widget': TinyMCE}
-#     }
-
-# admin.site.register(PortfolioDetail, PortfolioDetailAdmin)

@@ -12,12 +12,12 @@ from .models import Student
 class UserAdminConfig(UserAdmin):
     model = NewUser
     search_fields = ('email', 'phone_number', 'full_name',)
-    list_filter = ('email', 'phone_number', 'full_name', 'is_active', 'is_staff')
+    list_filter = ('email', 'phone_number', 'full_name', 'is_active', 'is_staff', 'is_superuser')
     ordering = ('-start_date',)
-    list_display = ('email', 'phone_number', 'full_name', 'is_active', 'is_staff')
+    list_display = ('email', 'phone_number', 'full_name', 'is_active', 'is_staff', 'is_superuser')
     fieldsets = (
         ('User Infor', {'fields': ('email', 'phone_number', 'full_name',)}),
-        ('Permissions', {'fields': ('is_staff', 'is_active')}),
+        ('Permissions', {'fields': ('is_staff', 'is_active', 'is_superuser')}),
         ('Personal', {'fields': ('about',)}),
     )
     formfield_overrides = {

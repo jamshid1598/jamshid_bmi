@@ -20,18 +20,6 @@ class ResumeForm(forms.Form):
     career  = forms.CharField(widget=forms.TextInput(attrs={'type':"text", 'class':"form-control", 'id':'career', 'name':"career"}))
     about_me= forms.CharField(widget=forms.Textarea(attrs={'class':"form-control", 'id':'about_me', 'name':'about_me'}))
 
-    # class Meta:
-    #     model = Resume
-    #     fields='__all__'
-
-    # def clean(self):
-    #     print(self.cleaned_data.get('student'))
-    #     print(self.cleaned_data.get('image'))
-    #     print(self.cleaned_data.get('bg_image'))
-    #     print(self.cleaned_data.get('career'))
-    #     print(self.cleaned_data.get('about_me'))
-
-
 
 class EducationForm(forms.ModelForm):
     student  = forms.CharField(widget=forms.TextInput(attrs={}))

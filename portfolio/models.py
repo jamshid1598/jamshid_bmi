@@ -83,17 +83,6 @@ class Portfolio(models.Model):
         return url
 
 
-# class PortfolioDetail(models.Model):
-#     portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE, related_name='portfolio_detail')
-
-#     class Meta:
-#         verbose_name = _("Portfolio Detail")
-#         verbose_name_plural = _("Portfolio Details")
-
-#     def __str__(self):
-#         return self.portfolio.name
-
-
 class Image(models.Model):
     portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE, related_name='portfolio_image')
     image     = models.ImageField(_("Image"), upload_to="portfolio-image/", blank=True, null=True)

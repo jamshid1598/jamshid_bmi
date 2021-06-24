@@ -15,8 +15,17 @@ from django.conf import settings
 from django.db.models import Case, Value, When, Q, F
 import json
 
-from .forms import FeedbackForm
+from django.contrib.auth import get_user_model
+User=get_user_model()
 
+from .forms import FeedbackForm
+from portfolio.models import (
+	Resume,
+    Education,
+    Experience,
+    Portfolio,
+    Image,
+)
 # Create your views here.
 
 class HomeView(View):
@@ -25,22 +34,18 @@ class HomeView(View):
 		context={}
 		return render(request, self.template_name, context)
 
-# class PortfolioView(View):
-# 	template_name='create-portfolio-1.html'
-# 	def get(self, request, *args, **kwargs):
-# 		context={}
-# 		return render(request, self.template_name, context)
-
 
 class PortfolioView(View):
 	template_name='portfolio.html'
 	def get(self, request, *args, **kwargs):
-		context={}
+		oblect_list = Portfolio.objects.all()
+		context={"oblect_list":oblect_list}
 		return render(request, self.template_name, context)
 
 class PortfolioDetailView(View):
 	template_name='portfolio-detail.html'
-	def get(self, request, *args, **kwargs):
+	def get(self, request, pk=None, *args, **kwargs):
+		# oblect = Portfolio.objects.get(pk=pk)
 		context={}
 		return render(request, self.template_name, context)
 

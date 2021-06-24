@@ -75,11 +75,6 @@ def student_info_form(request):
 				career = form.cleaned_data.get('career'),
 				about_me = form.cleaned_data.get('about_me'),
 			)
-			# print(form.cleaned_data.get('student'))
-			# print(form.cleaned_data.get('image'))
-			# print(form.cleaned_data.get('bg_image'))
-			# print(form.cleaned_data.get('career'))
-			# print(form.cleaned_data.get('about_me'))
 		else:
 			for msg in form.errors:
 				messages.error(request, f"{msg}: {form.errors[msg]}")
