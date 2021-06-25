@@ -38,15 +38,15 @@ class HomeView(View):
 class PortfolioView(View):
 	template_name='portfolio.html'
 	def get(self, request, *args, **kwargs):
-		oblect_list = Portfolio.objects.all()
-		context={"oblect_list":oblect_list}
+		object_list = Portfolio.objects.all()
+		context={"object_list":object_list}
 		return render(request, self.template_name, context)
 
 class PortfolioDetailView(View):
 	template_name='portfolio-detail.html'
 	def get(self, request, pk=None, *args, **kwargs):
-		# oblect = Portfolio.objects.get(pk=pk)
-		context={}
+		obj = Portfolio.objects.get(pk=pk)
+		context={'object': obj}
 		return render(request, self.template_name, context)
 
 

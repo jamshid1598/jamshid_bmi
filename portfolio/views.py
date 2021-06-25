@@ -22,6 +22,8 @@ from users.models import Student
 
 from .forms import(
 	ResumeForm,
+	PortfolioForm,
+	ContactForm,
 )
 from .models import (
 	Resume,
@@ -42,24 +44,63 @@ class HomeView(View):
 class PortfolioView(View):
 	template_name='portfolio/portfolio.html'
 	def get(self, request, *args, **kwargs):
-		context={}
+		object_list = Portfolio.objects.all()
+		user=None
+		for obj in object_list:
+			user = obj.user
+		context={"object_list": object_list, 'user':user}
 		return render(request, self.template_name, context)
 
 
 class PortfolioDetailView(View):
 	template_name='portfolio/portfolio-detail.html'
-	def get(self, request, *args, **kwargs):
-		context={}
+	def get(self, request, pk, *args, **kwargs):
+		obj = Portfolio.objects.get(pk=pk)
+		print(obj)
+		context={'object':obj}
 		return render(request, self.template_name, context)
 
 
 class ContactView(View):
 	template_name='portfolio/contact.html'
 	def get(self, request, *args, **kwargs):
-		context={}
+		form=ContactForm()
+		context={'form':form}
+		return render(request, self.template_name, context)
+	
+	def post(self, request, *args, **kwargs):
+		form=ContactForm()
+		context={'form':form}
 		return render(request, self.template_name, context)
 
 
+@login_required
+def portfolio_form(request):
+	if request.method == 'POST':
+		form = PortfolioForm(request.POST, request.FILES)
+		if form.is_valid():
+			print("hello")
+			print(form.cleaned_data.get('user'))
+			print(form.cleaned_data.get('name'))
+			print(form.cleaned_data.get('image'))
+			print(form.cleaned_data.get('link'))
+			print(form.cleaned_data.get('short_desc'))
+			print(form.cleaned_data.get('description'))
+
+			user = User.objects.get(pk=form.cleaned_data.get('user'))
+			Portfolio.objects.create(
+				user        = user,
+				name        = form.cleaned_data.get('name'),
+				image       = form.cleaned_data.get('image'),
+				link        = form.cleaned_data.get('link'),
+				short_desc  = form.cleaned_data.get('short_desc'),
+				description = form.cleaned_data.get('description'),
+			)
+		else:
+			for msg in form.errors:
+				messages.error(request, f"{msg}: {form.errors[msg]}")
+
+	return redirect('portfolio_2:portfolio')
 
 
 def student_info_form(request):

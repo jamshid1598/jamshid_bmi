@@ -31,99 +31,33 @@
             </h4>
                 <hr class="" style="box-shadow: 0 0 10px 1px rgba(0,0,0,1) ;">
             <div class="row d-flex justify-content-around">
-                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-3">
-                    <div class="card card_img">
-                        <img src="{% static 'image/1.jpg' %}" alt="">
-                        <div class="card_img_title d-flex justify-content-center text-center">
-                            <div class="card_img_title_1 p-3" style="">
-                                <h6 class="" style="color: aqua;">ShumOff.uz</h6>
-                                <p class="" style="color:white;">
-                                    shumoff.uz - Website for advertising car 'noise insulation' 
-                                    products,....
-                                </p>
-                            </div>
-                            <div class="card_img_title_2">
-                                <a class="btn" href="#" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);" >proyektni ko'rish</a>
-                                <a class="btn" href="{% url 'portfolio:portfolio-detail' %}" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);">ko'roq malumot olish</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-3">
-                    <div class="card card_img">
-                        <img src="{% static 'image/1.jpg' %}" alt="">
-                        <div class="card_img_title d-flex justify-content-center text-center">
-                            <div class="card_img_title_1 p-3" style="">
-                                <h6 class="" style="color: aqua;">Tride</h6>
-                                <p class="" style="color:white;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis quo, eaque ad a natus.</p>
-                            </div>
-                            <div class="card_img_title_2">
-                                <a class="btn" href="#" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);" >view site</a>
-                                <a class="btn" href="{% url 'portfolio:portfolio-detail' %}" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);">view project</a>
+
+                {% for obj in object_list %}
+
+                    <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-3">
+                        <div class="card card_img">
+                            <img src="{{ obj.imageURL }}" alt="" style="width: 328px; height: 205px">
+                            <div class="card_img_title d-flex justify-content-center text-center">
+                                <div class="card_img_title_1 p-3" style="">
+                                    <h6 class="" style="color: aqua;">{{ obj.name }}</h6>
+                                    <p class="" style="color:white;">
+                                        {{ obj.short_desc|safe|truncatechars:70 }}
+                                    </p>
+                                </div>
+                                <div class="card_img_title_2">
+                                    <a class="btn" href="{{ obj.link }}" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);" >proyektni ko'rish</a>
+                                    <a class="btn" href="{% url 'portfolio:portfolio-detail' obj.pk %}" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);">ko'roq malumot olish</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-3">
-                    <div class="card card_img">
-                        <img src="{% static 'image/1.jpg' %}" alt="">
-                        <div class="card_img_title d-flex justify-content-center text-center">
-                            <div class="card_img_title_1 p-3" style="">
-                                <h6 class="" style="color: aqua;">Tride</h6>
-                                <p class="" style="color:white;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis quo, eaque ad a natus.</p>
-                            </div>
-                            <div class="card_img_title_2">
-                                <a class="btn" href="#" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);" >view site</a>
-                                <a class="btn" href="{% url 'portfolio:portfolio-detail' %}" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);">view project</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-3">
-                    <div class="card card_img">
-                        <img src="{% static 'image/1.jpg' %}" alt="">
-                        <div class="card_img_title d-flex justify-content-center text-center">
-                            <div class="card_img_title_1 p-3" style="">
-                                <h6 class="" style="color: aqua;">Tride</h6>
-                                <p class="" style="color:white;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis quo, eaque ad a natus.</p>
-                            </div>
-                            <div class="card_img_title_2">
-                                <a class="btn" href="#" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);" >view site</a>
-                                <a class="btn" href="{% url 'portfolio:portfolio-detail' %}" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);">view project</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-3">
-                    <div class="card card_img">
-                        <img src="{% static 'image/1.jpg' %}" alt="">
-                        <div class="card_img_title d-flex justify-content-center text-center">
-                            <div class="card_img_title_1 p-3" style="">
-                                <h6 class="" style="color: aqua;">Tride</h6>
-                                <p class="" style="color:white;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis quo, eaque ad a natus.</p>
-                            </div>
-                            <div class="card_img_title_2">
-                                <a class="btn" href="#" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);" >view site</a>
-                                <a class="btn" href="{% url 'portfolio:portfolio-detail' %}" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);">view project</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-3">
-                    <div class="card card_img">
-                        <img src="{% static 'image/1.jpg' %}" alt="">
-                        <div class="card_img_title d-flex justify-content-center text-center">
-                            <div class="card_img_title_1 p-3" style="">
-                                <h6 class="" style="color: aqua;">Tride</h6>
-                                <p class="" style="color:white;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis quo, eaque ad a natus.</p>
-                            </div>
-                            <div class="card_img_title_2">
-                                <a class="btn" href="#" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);" >view site</a>
-                                <a class="btn" href="{% url 'portfolio:portfolio-detail' %}" style="border-radius: 3px; background: linear-gradient(to right,rgb(62, 212, 212), teal);">view project</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            
+                {% empty %}
+                    <div>
+                        <h4>Empty</h4>
+                    </div>    
+                {% endfor %}
+                
             </div>
         </section>
     
