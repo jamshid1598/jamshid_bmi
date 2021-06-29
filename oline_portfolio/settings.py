@@ -69,6 +69,7 @@ INSTALLED_APPS = [
     
     'phonenumber_field',
     'tinymce',
+    'rest_framework',
 
     'core.apps.CoreConfig',
     'portfolio.apps.PortfolioConfig',
@@ -80,6 +81,18 @@ AUTHENTICATION_BACKENDS = (
     # Needed to login by custom User model, regardless of `allauth`
     "django.contrib.auth.backends.ModelBackend",
 )
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES':[
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',
+    ],
+    'DEFAULT_PAGINATION_CLASSES':[
+        'rest_framework.pagination.PageNumberPagination',
+    ]
+
+}
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

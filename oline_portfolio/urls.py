@@ -23,9 +23,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('django.contrib.auth.urls')),
     path('tinymce/', include('tinymce.urls')),
+    path('api-auth/', include('rest_framework.urls')),
 
     path('', include('core.urls', namespace='portfolio')),
     path('sub/', include('portfolio.urls', namespace='portfolio_2')),
+    path('api-portfolio/', include('api.urls', namespace='api_portfolio')),
     path('account/', include('users.urls')),
 ]
 
