@@ -60,6 +60,9 @@ class PortfolioForm(forms.Form):
     short_desc  = forms.CharField(widget=Textarea(attrs={'id':'short_desc', 'class':"form-control", 'name':'short_desc'}))
     description = forms.CharField(widget=Textarea(attrs={ 'id':'description',  'class':"form-control", 'name':"description"}))
 
+    file       = forms.FileField(widget=forms.FileInput(attrs={'type':"file", 'id':"file", 'style':"width: 100%;", 'name':'file', },), required=False)
+    document   = forms.FileField(widget=forms.FileInput(attrs={'type':"file", 'id':"document", 'style':"width: 100%;", 'name':'document'}), required=False)
+
     # class Meta:
     #     model = Portfolio
     #     fields='__all__'
