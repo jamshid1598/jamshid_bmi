@@ -69,6 +69,9 @@ class Portfolio(models.Model):
     description = models.TextField(_('Description'), blank=True, null=True)
     link        = models.URLField(_("Project Link"), blank=True, null=True)
 
+    file        = models.FileField(_("Project File"), upload_to='project-file/', blank=True, null=True)
+    document    = models.FileField(_("Project Document"), upload_to='project-document/', blank=True, null=True)
+
     class Meta:
         verbose_name = _("Portfolio")
         verbose_name_plural = _("Portfolios")

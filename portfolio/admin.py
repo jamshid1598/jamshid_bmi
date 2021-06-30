@@ -92,7 +92,7 @@ class PortfolioAdmin(admin.ModelAdmin):
     fieldsets = (
         ('Portfolio', {
             "fields": (
-                'user', 'name', 'image', 'link', 'short_desc', 'description',
+                'user', 'name', 'image', 'link', 'short_desc', 'description', "file", "document",
             ),
         }),
     )

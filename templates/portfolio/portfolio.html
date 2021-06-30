@@ -74,12 +74,21 @@
                         </div>
                     {% empty %}
                         <div>
-                            <h4>Empty</h4>
+                            <h4>Bo'sh</h4>
                         </div>    
                     {% endfor %}
 
                     {% if request.user.is_authenticated %}
                         {% if request.user.id == user.id %}
+                            <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-3">
+                                <div class="card card_button">
+                                    <img src="{% static 'image/white_bg.jpg' %}" alt="" style="width: 328px; height: 205px">
+                                    <div class="card_button_img">
+                                        <button class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal">protfolio qo'shish</button>
+                                    </div>
+                                </div>
+                            </div>
+                        {% elif user == "new" %}
                             <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-3">
                                 <div class="card card_button">
                                     <img src="{% static 'image/white_bg.jpg' %}" alt="" style="width: 328px; height: 205px">
@@ -126,6 +135,20 @@
                             <div class="form-group my-1">
                                 <label for="link">Proyekt Linki</label>
                                 <input type="text" class="form-control" id='link' name="link">
+                            </div>
+                            <div class="custom-file mb-5">
+                                <label for="file" class="m-0">Zip/RAR File</label>
+                                <div class="btn m-0" style="width: 100%; background-color:gray;color:white;">  
+                                    <input type="file" id="file" style="width: 100%;", name='file'>
+                                </div>
+                                <small>proyektni zip/rar formatda yuklang</small>
+                            </div>
+                            <br>
+                            <div class="custom-file mb-5">
+                                <label for="document" class="m-0">Dokument</label>
+                                <div class="btn m-0" style="width: 100%; background-color:gray;color:white;">  
+                                    <input type="file" id="document" style="width: 100%;", name='document'>
+                                </div>
                             </div>
                             <div class="custom-file mb-5">
                                 <label for="image" class="m-0">Asosiy Rasm</label>

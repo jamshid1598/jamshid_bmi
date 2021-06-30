@@ -46,8 +46,11 @@ class PortfolioView(View):
 	def get(self, request, *args, **kwargs):
 		object_list = Portfolio.objects.all()
 		user=None
-		for obj in object_list:
-			user = obj.user
+		if object_list:
+			for obj in object_list:
+				user = obj.user
+		else:
+			user="new"
 		context={"object_list": object_list, 'user':user}
 		return render(request, self.template_name, context)
 
@@ -95,6 +98,8 @@ def portfolio_form(request):
 				link        = form.cleaned_data.get('link'),
 				short_desc  = form.cleaned_data.get('short_desc'),
 				description = form.cleaned_data.get('description'),
+				file        = form.cleaned_data.get('file'),
+				document    = form.cleaned_data.get('document'),
 			)
 		else:
 			for msg in form.errors:

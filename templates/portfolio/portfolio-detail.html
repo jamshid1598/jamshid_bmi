@@ -88,6 +88,12 @@
                             </div>
                         </div>
                     </div>
+                    {% if object.file %}
+                        <a href="{{ object.file.url }}" class="btn btn-outline-dark" >Dasturni Yuklab Olish</a>
+                    {% endif %}
+                    {% if object.document %}
+                        <a href="{{ object.document.url }}" class="btn btn-outline-dark" >Hujjat Yuklab Olish</a>
+                    {% endif %}
                 </div>
             </div>
         </section>
