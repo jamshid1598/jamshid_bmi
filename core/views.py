@@ -77,7 +77,7 @@ class FeedbackView(View):
 					subject = "New Message"
 					thoughts = f"New message from {full_name}:\nTel: {phone_number}\nEmail: {email}\n\n{text}"
 					sender = settings.EMAIL_HOST_USER
-					recipients = ['dovurovjamshid95@gmail.com']
+					recipients = ['dovurovjamshid95@gmail.com', ]
 
 					send_mail(subject, thoughts, sender, recipients, fail_silently=False)
 

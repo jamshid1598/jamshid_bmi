@@ -12,6 +12,13 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 
+from decouple import config
+
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
+HOST_USERNAME = config('HOST_USERNAME', default='')
+HOST_PASSWORD = config('HOST_PASSWORD', default='')
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,10 +27,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '#7e2ml=*8trgb58ym!$*g7$zjkn2jptt4&qadta=q!3_@b+k^s'
+# SECRET_KEY = '#7e2ml=*8trgb58ym!$*g7$zjkn2jptt4&qadta=q!3_@b+k^s'
+SECRET_KEY=SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = DEBUG
 
 ALLOWED_HOSTS = ["*"]
 
@@ -201,5 +209,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'dovurovjamshid95@gmail.com' # email adress
-EMAIL_HOST_PASSWORD = 'dzmmqhktcpgqdnjb' # 2fa password
+EMAIL_HOST_USER = HOST_USERNAME  #'dovurovjamshid95@gmail.com' # email adress
+EMAIL_HOST_PASSWORD = HOST_PASSWORD # 'dzmmqhktcpgqdnjb' # 2fa password
